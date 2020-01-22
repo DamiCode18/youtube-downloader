@@ -1,8 +1,15 @@
 const express = require('express');
 const cors = require('cors');
 const ytdl = require('ytdl-core');
+const path = require('path');
+
 const app = express();
+
 app.use(cors());
+app.use(express.json());
+app.use(express.urlencoded({extended: false}));
+
+const port = process.env.PORT || 5000;
 
 app.get('/download', (req, res) => {
 	var URL = req.query.URL;
@@ -19,6 +26,6 @@ if (process.env.NODE_ENV === 'production') {
 	});
 }
 
-app.listen(5000, () => {
-	console.log('Server Works !!! At port 5000');
+app.listen(port, () => {
+	console.log(`server running on port: ${port}`);
 });
