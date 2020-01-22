@@ -3,6 +3,9 @@
 	"version": "1.0.0",
 	"description": "youtube downloader",
 	"main": "index.js",
+	"engines": {
+		"node": "12.13.0"
+	},
 	"scripts": {
 		"client-install": "yarn install --prefix client",
 		"start": "node server.js",
