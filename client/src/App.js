@@ -15,7 +15,7 @@ function download(e) {
 	}
 }
 function sendURL(URL) {
-	window.location.href = `"http://127.0.0.1:5000/download?URL=${URL}`;
+	window.location.href = `http://127.0.0.1:5000/download?URL=${URL}`;
 }
 
 function App() {
