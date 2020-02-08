@@ -1,0 +1,33 @@
+.y-down {
+	margin-top: 200px;
+	text-align: center;
+	display: grid;
+	grid-template-columns: auto;
+}
+.heading {
+	font-size: 2rem;
+	font-weight: bolder;
+}
+
+input[type="text"] {
+	width: 350px;
+	outline: none;
+	border: 1px solid #000;
+	border-radius: 50px;
+	padding: 15px;
+	margin: 10px;
+	text-align: center;
+}
+input[type="button"] {
+	width: 200px;
+	border-radius: 50px;
+	padding: 15px;
+	margin: 10px;
+	background: green;
+	color: #fff;
+	font-weight: bold;
+}
+input[type="button"]:hover {
+	background: #033803;
+	color: #fff;
+}
