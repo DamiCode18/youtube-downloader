@@ -2,10 +2,11 @@ import React, {Component} from 'react';
 import './Ydownloader.css';
 
 function sendURL(URL) {
+	let link = 'http://localhost:5000' || 'https://y-downloader.herokuapp.com';
 	if (!URL) {
 		window.location.href = '/';
 	} else {
-		window.location.href = `http://localhost:5000/download?URL=${URL}`;
+		window.location.href = `${link}/download?URL=${URL}`;
 	}
 }
 let btn, URLinput;
