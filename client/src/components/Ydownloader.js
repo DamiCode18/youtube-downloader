@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
 import './Ydownloader.css';
+// import axios from 'axios';
 
 function sendURL(URL) {
 	let link = 'http://localhost:5000' || 'https://y-downloader.herokuapp.com';
 	if (!URL) {
-		window.location.href = '/';
+		// Do nothing!!!!
 	} else {
 		window.location.href = `${link}/download?URL=${URL}`;
 	}
@@ -12,9 +13,6 @@ function sendURL(URL) {
 let btn, URLinput;
 class Ydownloader extends Component {
 	onSubmit = (e) => {
-		e.preventDefault();
-	};
-	download = (e) => {
 		e.preventDefault();
 		btn = document.getElementById('convert-button');
 		URLinput = document.getElementById('URL-input');
@@ -32,13 +30,7 @@ class Ydownloader extends Component {
 				<form onSubmit={this.onSubmit}>
 					<input type='text' id='URL-input' placeholder='paste your link!' />
 					<div>
-						<input
-							type='button'
-							id='convert-button'
-							className='btn'
-							onClick={this.download}
-							value='Download Now'
-						/>
+						<input type='submit' id='convert-button' className='btn' value='Download Now' />
 					</div>
 				</form>
 			</div>
